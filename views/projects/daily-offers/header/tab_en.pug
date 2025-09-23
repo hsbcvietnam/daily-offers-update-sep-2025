@@ -1,0 +1,30 @@
+ul.chs_tab2_subtab(aria-label="There are 6 tabs of content")
+  li#iphone(onclick="window.open('/daily-offers/iphone16', '_self'); call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_Iphone'});", category='iphone')
+    a(href="/daily-offers/iphone16")
+      img(src!=imageFolder+'/hsbc/chs_icon_subtab_iphone.png')
+      | iPhone16
+  li#liveplus(onclick="window.open('/daily-offers/liveplusdining', '_self'); call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_Liveplus'});", category='liveplus', role="tab", aria-selected="true", aria-label="The default and current active tab is Live+ Dining Tab")
+    a(href="/daily-offers/liveplusdining")
+      img(src!=imageFolder+'/hsbc/chs_icon_subtab_liveplus.png')
+      | Live+
+      |  dining
+  li(onclick="window.open('/daily-offers/all/en', '_self'); call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_All'});", category='all', role="tab", aria-selected="true", aria-label="The second tab is the All offers tab")
+    a(href="/daily-offers/all/en")
+      img(src!=imageFolder+'/hsbc/chs_icon_subtab_all.png')
+      | All
+  li(onclick="window.open('/daily-offers/dining-entertainment/en', '_self'); call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_Dining'});", category='dining', role="tab", aria-selected="true", aria-label="The third tab is the Dining, recreation tab")
+    a(href="/daily-offers/dining-entertainment/en")
+      img(src!=imageFolder+'/hsbc/chs_icon_subtab_dining.png')
+      | Dining, recreation
+  li(onclick="window.open('/daily-offers/shopping/en', '_self'); call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_Shopping'});", category='shopping', role="tab", aria-selected="true", aria-label="The fourth tab is the Shopping Tab")
+    a(href="/daily-offers/shopping/en")
+      img(src!=imageFolder+'/hsbc/chs_icon_subtab_shopping.png')
+      | Shopping
+  li(onclick="window.open('/daily-offers/travel/en', '_self'); call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_Travel'});", category='travel', role="tab", aria-selected="true", aria-label="The fifth tab is the Travel Tab")
+    a(href="/daily-offers/travel/en")
+      img(src!=imageFolder+'/hsbc/chs_icon_subtab_travel.png')
+      | Travel
+  li(onclick="window.open('/daily-offers/others/en', '_self'); call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_Other'});", category='other', role="tab", aria-selected="true", aria-label="The sixth and last tab is the Other Tab")
+    a(href="/daily-offers/others/en")
+      img(src!=imageFolder+'/hsbc/chs_icon_subtab_other.png')
+      | Offers from Visa & MasterCard

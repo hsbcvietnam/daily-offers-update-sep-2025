@@ -1,0 +1,96 @@
+.container-fluid.chs_page
+  #chs_header_container.vn
+    #chs_cookie.row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.chs_page_w
+        .chs_banner_content
+          .chs_banner_content_text Website HSBC sử dụng cookie nhằm giúp trải nghiệm trực tuyến của Quý khách trên trang web của chúng tôi dễ dàng và thân thiện hơn. Bằng việc tiếp tục truy cập trang web này, Quý khách đồng ý và cho phép chúng tôi quyền sử dụng thông tin cookies của Quý khách. Quý khách có thể tìm hiểu thêm thông tin chi tiết tại&nbsp;
+            a(href='https://www.hsbc.com.vn/privacy-and-security/#privacymatters', target='_blank')
+              | Chính sách Cookie
+            |  của chúng tôi.
+          i.glyphicon.glyphicon-remove#close_button
+    #chs_translate.inactive
+      .chs_page_w
+        #language_btn
+          | Tiếng Việt
+          i.glyphicon.glyphicon-menu-down
+      .chs_page_w.language_menu
+        .language_item
+          | Tiếng Việt
+          i.glyphicon.glyphicon-ok
+        a.language_item(href='../../daily-offers/en')
+          | English
+    #chs_header.row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.chs_page_w
+        .chs_menu_desktop
+          a(href='https://www.hsbc.com.vn/1/2/home', target='_self')
+            img.chs_logo_img(src!=imageFolder+'/hsbc/chs_hsbc_logo.png', width='113', height='30', alt='')
+          ul.chs_menu_list_desktop
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_DO'});", href='https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab1.png', alt='')
+                |  Ưu đãi mỗi ngày
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW'});", href='https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab1.png', alt='')
+                |  Ưu đãi mỗi ngày
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_TV'});", href='https://card.apply.hsbc.com.vn/van-dam-nam-chau/vn', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab3.png', alt='')
+                |  Vạn Dặm Năm Châu
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_IP'});", href='https://card.apply.hsbc.com.vn/tra-gop/dien-may-cong-nghe/vn', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab4.png', alt='')
+                |  Trả góp 0% lãi suất
+            li
+              .search-bar
+                input(type='text', placeholder='Search', required='')
+                .search-icon
+        .chs_menu_mobile
+          .chs_menu_mobile_bar
+            a(href='https://www.hsbc.com.vn/1/2/home', target='_self')
+              img.chs_logo_img.active(src!=imageFolder+'/hsbc/chs_hsbc_logo.png', width='113', height='30', alt='')
+            .search-bar
+              input(type='text', placeholder='Search', required='')
+              .search-icon
+          ul.chs_menu_mobile_list
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_DO'});", href='https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab1.png', alt='')
+                br
+                |             Ưu đãi
+                br
+                |             mỗi ngày
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW'});", href='https://card.apply.hsbc.com.vn/uu-dai-moi-ngay/vn')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab1.png', alt='')
+                br
+                |             Ưu đãi
+                br
+                |             mỗi ngày
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_TV'});", href='https://card.apply.hsbc.com.vn/van-dam-nam-chau/vn', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab3.png', alt='')
+                br
+                |             Vạn Dặm
+                br
+                |             Năm Châu
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_IP'});", href='https://card.apply.hsbc.com.vn/tra-gop/dien-may-cong-nghe/vn', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab4.png', alt='')
+                br
+                |             Trả góp
+                br
+                |             0% lãi suất
+script.
+  window.addEventListener("load", function() {
+    let height = document.querySelector("#chs_cookie").offsetHeight
+    document.querySelector(".chs_key").style.paddingTop = `calc(83px + ${height}px)`
+  })
+  document.querySelector("#close_button").addEventListener("click", function() {
+    this.closest("#chs_cookie").style.display = "none";
+    document.querySelector(".chs_key").style.paddingTop = "83px"
+  });
+  document.querySelector("#language_btn").addEventListener("click", function() {
+    let el = document.querySelector("#chs_translate")
+    el.className = el.className === "active" ? "inactive" : "active";
+  })

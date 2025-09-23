@@ -1,0 +1,51 @@
+block variables
+
+-
+  var customeFolderName = ''; //- DO NOT ADD THE SLASH IN FRONT OR AFTER THE FOLDER NAME. THE CODE BELOW WILL TAKE CARE OF IT.
+
+  //- THE VARIABLE folderName IS FOR OUR SITE TO USE. IF YOU HAVE CUSTOM FOLDER NAME, PLEASE USE THE customeFolderName VARIABLE.
+  //- DO NOT MODIFY THE BELOW LINES OF CODE
+  var folderNamePath = folderName || customeFolderName;
+  if(folderNamePath.trim() !== '') {
+    folderNamePath = "/" + folderNamePath
+  }
+
+  //- THE TIME TAG IS TO AVOID CACHE ISSUE, EXAMPLE AT BELOW.
+  var imageFolder = folderNamePath+'/images',
+      cssFolder = folderNamePath+'/css',
+      jsFolder = folderNamePath+'/js',
+      fileFolder = folderNamePath+'/files',
+      timeTag = Math.round(Date.now()/1800000);
+
+//- DO NOT MODIFY THE BELOW LINES OF CODE
+doctype html
+html
+  head
+    title!= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(content="IE=edge,chrome=1,chrome=1", "http-equiv"="X-UA-Compatible")
+    meta(http-equiv="X-UA-Compatible" content="IE=EmulateIE11")
+    meta(charset="utf-8")
+    meta(content="yes", name="apple-mobile-web-app-capable")
+    //-
+      link(rel="stylesheet", href!= cssFolder + "/bootstrap.css")
+      link(rel='stylesheet', href!= cssFolder + '/style.css?v='+timeTag)
+    block blockCSS
+
+    //- DO NOT MODIFY THE BELOW LINES OF CODE, THE CODE BELOW IS CONVERT PUG/JADE VARIABLE TO JAVASCRIPT VARIABLE
+    script.
+      //- var pageOption = {
+      //-   language: !{JSON.stringify(language)},
+      //- };
+  body
+    block blockTealium
+    block content
+
+    //- DO NOT MODIFY THE BELOW LINES OF CODE, BELOW ARE THE PLUGINS WE NEED FOR THE FORM TO WORK.
+    //-
+      script(src!= jsFolder + "/jquery.3.3.1.js")
+      script(src!= jsFolder + "/bootstrap.min.js")
+      script(src!= jsFolder + "/validate.js")
+      script(src!= jsFolder + "/waypoint.js")
+      script(src!= jsFolder + "/script.min.js?v="+timeTag)
+    block blockJS

@@ -1,0 +1,125 @@
+//- out: ../../public/index_en.html, pretty: true
+extends ../layout
+
+block variables
+  -
+    var title = "Daily offers | Credit Card promotion - HSBC Vietnam";
+    //- MAKE SURE THE CORRECT LANGUAGE IS SELECTED, it either english or vietnamese
+    //- var language = "english";
+  meta(name="Daily offers | Credit Card promotion - HSBC Vietnam" content="Up to 40% discount on dining, entertainment, shopping, travelling and beauty for HSBC Credit Cardholders only")
+
+block blockCSS
+  //- ========================
+  //- Custom CSS - IF you need to add custom CSS files, add them here
+  //- ========================
+  //- link(rel="stylesheet", href!= cssFolder + "/new-css-file-you-want-to-add.css")
+  link(rel="stylesheet", href!= cssFolder + "/selectize.css")
+  link(rel="stylesheet", href!= cssFolder + "/chs_custom.css")
+  link(rel="stylesheet", href!= cssFolder + "/chs_styles.css?v=006")
+  link(rel='canonical', href='https://card.apply.hsbc.com.vn/daily-offers/en')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  link(rel="icon", type="image/png", href="https://www.hsbc.com.vn/etc.clientlibs/dpws/clientlibs-public/clientlib-site/resources/favicons/favicon-32x32.png")
+
+
+block blockJS
+  //- ========================
+  //- Custom JS - IF you need to add custom JavaScript files, add them here
+  //- ========================
+  //- script(src!= jsFolder + "/new-javascript-file-you-want-to-add.js")
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  script(src!= jsFolder + "/chs_script.js")
+  script(src!= jsFolder + "/chs_search.js")
+  script(src!= jsFolder + "/hsbc_cookies.js")
+
+
+block blockTealium
+  script.
+    if (document.URL.indexOf("pid=") != -1 || document.URL.indexOf("cid=") != -1) {
+    jQuery("a[href*=' /1/2/vnm2/lead/card/the-tin-dung-hsbc-credit-card']").map(function() {
+    $(this).attr("href", $(this).attr("href").split("?")[0] + "?" + document.URL.match(/[^&?]*?=[^&?]*/)[0])
+    });
+    };
+  script.
+    function call_utag_link(data_obj){utag.link(data_obj)};
+  script.
+    var pageOption = {
+    language: "english",
+    };
+  script.
+    var pageOption = {language: "english" ||  ''};
+    var prevArrow = !{JSON.stringify(imageFolder)} + '/slick-arrow-left.png';
+    var nextArrow = !{JSON.stringify(imageFolder)} + '/slick-arrow-right.png';
+
+    // Universal Data Object
+    //- PLEASE REFER THE example.pdf FOR UDO VALUE.
+    window.utag_data  = {
+      "page_url": location.protocol + '//' + document.domain + location.pathname + location.hash,
+      "page_name": location.pathname.replace(/\/(en|vn)/g, "").replace(/(https|http):\/\//, "").replace(/^/, "pws").replace(/\//g, ":").replace(/:$/, "").replace(/-/g, " "),
+      "page_language": pageOption.language == "vietnamese" ? "vn_vi" : "en",
+      "page_type": "promotion",
+      "page_security_level": "0",
+      "page_business_line": "rbwm",
+      "page_customer_group": "general",
+      "site_section": "pws",
+      "product_category": "credit cards",
+      "product_subcategory": "offers",
+    };
+
+    window.utag_data.page_category = window.utag_data.page_name.split(":")[1];
+    window.utag_data.page_subcategory = window.utag_data.page_name.split(":")[2];
+    //- Loading Tealium
+    (function(a,b,c,d,e){
+      // Change the 'production.domain.com' into the acutal application production domain.
+      b=document;e=b.domain==('card.apply.hsbc.com.vn')?'prod':'qa';
+      a='//tags.tiqcdn.com/utag/hsbc/vn-rbwm/' + e + '/utag.js';
+      c='script';d=b.createElement(c);d.src=a;
+      d.type='text/java'+c;d.async=true;
+      a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a)
+    })();
+
+block content
+  include ../header/header_en
+  .container-fluid.chs_page
+    #chs_tab
+      #chs_key_2
+        .row.chs_key
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12.chs_page_w
+            #chs_key_slider
+              .chs_banner_mobile
+                img(src!=imageFolder+'/image/chs_homepage_banner.jpg', alt='')
+              .chs_banner_pc
+                .col-sm-5.col-xs-12
+                  .chs_banner_bg
+                    .chs_banner_title
+                      | Daily offers
+                    .chs_banner_text
+                      | Up to 40% off on dining, entertainment, shopping, travelling and beauty for HSBC Credit Cardholders only
+      //
+      #chs_tab_2
+        .row
+          .chs_page_w.chs_main_offer
+            #chs_tab2_subtab.col-lg-12.col-md-12.col-sm-12.col-xs-12
+              include ../header/tab_en
+            #chs_tab2_sticky
+            //
+            include merchants_en
+            .col-xs-12
+              br
+              a.chs_tab2_tnc(href= fileFolder+'/HSBC-Happy-Weekend-General-TnC-EN.pdf', target='_blank') Daily offers - Terms and Conditions apply
+    .footer
+      img(src!=imageFolder+'/image/main_footer.png', width='100%')
+    #dash.row.chs_offer_info.section-contact
+      .container
+        #cards
+          p
+            img#card_image(src='/projects/daily-offers/images/hsbc/chs_hsbc_cards_liveplus.png')
+          p
+            a.text-red(onclick="call_utag_link({'event_category': 'content','event_action': 'onsite', 'event_content': 'CP_HW_ACQ_En'});", href='https://card.apply.hsbc.com.vn/uu-dai-mo-the-tin-dung-hsbc/vn?pid=VN_PID:OF:CC:PWS:2005:001:daily:en', target='_blank')
+              | Apply today and enjoy hundreds of promotions
+    include footer_en
+  include ../popup/popup_en

@@ -1,0 +1,94 @@
+.container-fluid.chs_page
+  #chs_header_container
+    #chs_cookie.row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.chs_page_w
+        .chs_banner_content
+          .chs_banner_content_text We use cookies to give you the best possible experience on our website. By continuing to browse this site, you give consent for cookies to be used. For more details please read our&nbsp;
+            a(href='https://www.hsbc.com.vn/en-vn/privacy-and-security/#privacymatters', target='_blank')
+              | Cookie Policy
+            | .
+          i.glyphicon.glyphicon-remove#close_button
+    #chs_translate.inactive
+      .chs_page_w
+        #language_btn
+          | English
+          i.glyphicon.glyphicon-menu-down
+      .chs_page_w.language_menu
+        .language_item
+          | English
+          i.glyphicon.glyphicon-ok
+        a.language_item(href='../../uu-dai-moi-ngay/vn')
+          | Tiếng Việt
+    #chs_header.row
+      .col-lg-12.col-md-12.col-sm-12.col-xs-12.chs_page_w
+        .chs_menu_desktop
+          a(href='https://www.hsbc.com.vn/1/2/home', target='_self', role="img", aria-label="Click here to go to main webpage")
+            img.chs_logo_img(src!=imageFolder+'/hsbc/chs_hsbc_logo.png', width='113', height='30', alt='')
+          ul.chs_menu_list_desktop
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_DO_En'});", href='https://card.apply.hsbc.com.vn/daily-offers/en', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab1.png', alt='')
+                | Daily offers
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_En'});", href='https://card.apply.hsbc.com.vn/daily-offers/en', target='_blank', role="button", aria-label="The Default and current active content is Daily offers")
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab2.png', alt='')
+                | Daily offers
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_TV_En'});", href='https://card.apply.hsbc.com.vn/travelling/en', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab3.png', alt='')
+                | Travelling
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_IP_En'});", href='https://card.apply.hsbc.com.vn/installment/electronics-gadgets/en', target='_blank', role="button", aria-label="Click here to go to 0% Instalment program webpage")
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab4.png', alt='')
+                | 0% Installment Program
+            li
+              .search-bar
+                input(type='text', placeholder='Search', required='', aria-label="Click here and type to search content in this page", role="searchbox")
+                .search-icon
+        .chs_menu_mobile
+          .chs_menu_mobile_bar
+            a(href='https://www.hsbc.com.vn/1/2/home', target='_self')
+              img.chs_logo_img.active(src!=imageFolder+'/hsbc/chs_hsbc_logo.png', width='113', height='30', alt='', role="img", aria-label="Click here to go to main webpage")
+            .search-bar
+              input(type='text', placeholder='Search', required='', aria-label="Click here and type to search content in this page", role="searchbox")
+              .search-icon
+          ul.chs_menu_mobile_list
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_DO_En'});", href='https://card.apply.hsbc.com.vn/daily-offers/en')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab1.png', alt='')
+                br
+                |             Daily
+                br
+                | offers
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_HW_En'});", href='https://card.apply.hsbc.com.vn/daily-offers/en', role="button", aria-label="The Default and current active content is Daily offers")
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab1.png', alt='')
+                br
+                |             Daily
+                br
+                | offers
+            //-li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_TV_En'});", href='https://card.apply.hsbc.com.vn/travelling/en', target='_blank')
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab3.png', alt='')
+                br
+                |             Travelling
+            li
+              a(onclick="call_utag_link({'event_category': 'content','event_action': 'tab', 'event_content': 'CP_IP_En'});", href='https://card.apply.hsbc.com.vn/installment/electronics-gadgets/en', target='_blank', role="button", aria-label="Click here to go to 0% Instalment program webpage")
+                img(src!=imageFolder+'/hsbc/chs_icon_maintab4.png', alt='')
+                br
+                |             0% Installment
+                br
+                | Program
+script.
+  window.addEventListener("load", function() {
+    let height = document.querySelector("#chs_cookie").offsetHeight
+    document.querySelector(".chs_key").style.paddingTop = `calc(83px + ${height}px)`
+  })
+  document.querySelector("#close_button").addEventListener("click", function() {
+    this.closest("#chs_cookie").style.display = "none";
+    document.querySelector(".chs_key").style.paddingTop = "83px"
+  });
+  document.querySelector("#language_btn").addEventListener("click", function() {
+    let el = document.querySelector("#chs_translate")
+    el.className = el.className === "active" ? "inactive" : "active";
+  })

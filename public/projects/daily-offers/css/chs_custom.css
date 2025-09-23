@@ -1,0 +1,1296 @@
+/* CSS Document - UPDATE 2019.02.21 */
+div.containerLogoArea,
+.hsbcPopupCloser,
+.hsbcPopupBar{
+    display: none !important;
+}
+#test{
+	position: fixed;
+	top: 200;
+	z-index: 9999;
+	left: 50;
+}
+/*START TAB 1*/
+div.chs_content_title {
+	text-align: center;
+	margin: 50px 0 20px 0;
+	width: auto;
+}
+.chs_text_red{
+	color: #db0011;
+}
+.chs_text_red_bold{
+	color: #db0011;
+	font-family: UniversNextforHSBC-Bold !important;
+	font-size: inherit;
+	text-decoration: underline;
+}
+.chs_img_cards {
+	text-align: center;
+}
+.chs_img_cards img {
+	margin: 50px auto 0 auto !important;
+	width: 100%;
+	max-width: 550px;
+	height: auto;
+}
+#chs_tab_1 .chs_main_offer{
+	padding-top: 0px !important;
+}
+.chs_main_offer{
+	width: 100%;
+	height: auto;
+	padding: 30px 0 50px 0;
+	float: left;
+}
+/* .chs_main_offer_box {
+	width: 100% !important;
+	height: auto;
+	display: table;
+	margin: 30px 0 20px 0;
+	min-width: 32%;
+	max-width: 32%;
+	box-sizing: border-box;
+	-ms-grid-column: 1;
+	-ms-grid-row: 1;
+} */
+.chs_flex_container {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+.chs_main_offer_box {
+	flex-basis: calc(100% / 3);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: stretch;
+	margin: 30px 0 20px 0;
+}
+
+.chs_main_offer_box > a {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	padding-top: calc(100% * 580 / 760);
+}
+
+.chs_main_offer_box a img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	cursor: pointer;
+}
+
+/* @supports (-ms-ime-align: auto) {
+	.chs_flex_container {
+	  	display: block;
+	}
+	
+	.chs_main_offer_box {
+		float: left;
+		width: 33.33% !important;
+	}
+}
+  
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.chs_flex_container {
+		display: block;
+	}
+
+	.chs_main_offer_box {
+		float: left;
+		width: 33.33% !important;
+	}
+} */
+img.chs_main_offer_img{
+	width: 100%;
+	height: auto;
+}
+.chs_main_offer_bg{
+	width: calc(100% - 6%);
+	position: relative;
+	flex: 1;
+	margin: -35% 3% 0 3%;
+	padding: 15px 15px 100px 15px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+	box-shadow: 0 4px 8px 0 #cccccc, 0 6px 10px 0 #f2f2f2;
+}
+
+.iphone .chs_main_offer_bg {
+	box-shadow: 0 2px 2px 0 #cccccc, 0 3px 3px 0 #f2f2f2;
+}
+.not_show_on_others {
+	display: none;
+}
+#chs_tab_2.liveplus .not_show_on_others, #chs_tab_2.iphone .not_show_on_others {
+	display: flex;
+}
+#chs_tab_2:not(.all) .only_show_on_all {
+	display: none;
+}
+p.chs_main_offer_title{
+	font-size: 20px;
+	color: #db0011;
+	/* text-transform: capitalize; */
+	padding-right: 45px;
+}
+p.chs_main_offer_title strong{
+	color: #db0011;
+}
+p.chs_main_offer_title a{
+  font-size: 20px;
+	color: #db0011;
+  text-decoration: none;
+}
+ul.chs_main_offer_text{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ul.chs_main_offer_text li{
+	position: relative;
+	padding: 5px 0 0 0;
+}
+/* ul.chs_main_offer_text li:before{
+	position: absolute;
+	top: 13px;
+	left: 0;
+	content: "";
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #db0011;
+} */
+p.chs_main_offer_period{
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+}
+p.chs_main_offer_period i{
+	padding-right: 5px;
+}
+.iphone .chs_main_offer_period {
+	/* display: none; */
+}
+.iphone .chs_main_offer_category {
+	/* display: none; */
+}
+div.chs_main_offer_category{
+	width: 100px;
+	height: 30px;
+	padding: 5px 0;
+	border-radius: 15px;
+	border: 1px solid #CCC;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 3px;
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	font-size: 14px;
+	cursor: default;
+	transition: border 1s;
+}
+div.chs_main_offer_category:hover{
+	border: 1px solid #333;
+/*	color: #db0011;*/
+}
+div.chs_icon_plus {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #db0011;
+  color: #FFFFFF;
+  font-size: 30px;
+  position: absolute;
+  top: -25px;
+  right: 10px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+/*
+i.chs_icon_plus{
+	font-size: 40px;
+	position: absolute;
+	top: -15px;
+	right: 15px;
+	color: #db0011;
+	cursor: pointer;
+	transform: rotate();
+	transition: transform 1s;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+}
+i.chs_icon_plus:hover{
+	transform: rotate(180deg);
+} */
+.chs_main_offer_box img{
+	cursor: pointer;
+}
+.chs_main_offer_box:hover div.chs_icon_plus{
+	cursor: pointer;
+	transform: rotate(180deg);
+	transition: transform 1s;
+}
+#chs_tab_1{
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* padding-top: 100px; */
+  /* float: left; */
+}
+#chs_tab2_sticky{
+  width: 100%;
+  height: auto;
+  /* display: table-cell; */
+  /* margin-top: 100px; */
+   /* position: relative; */
+}
+
+/*END TAB 1*/
+
+
+img.chs_slider_img{
+	width: 100%;
+	height: auto;
+  padding: 0 15px !important;
+}
+
+#chs_cards_intro {
+	width: 100%;
+	height: auto;
+	background-color: #fff5e1;
+}
+#chs_cards_intro img.chs_cards_intro_img {
+	float: left;
+	width: 100%;
+	height: auto;
+}
+#chs_cards_intro div.intro,
+#chs_cards_intro div.intro strong{
+	font-weight: bold;
+	color: #db0011;
+	text-align: center;
+	font-size: 25px;
+	padding-top: 50px;
+	margin: 0 auto;
+}
+div.chs_intro_links{
+	width: 100%;
+	height: auto;
+	float: left;
+	text-align: center;
+	margin: 40px 0;
+}
+div.chs_intro_links a,
+div.chs_intro_links a strong,
+div.chs_intro_links a i{
+  font-size: 30px;
+  text-decoration: underline;
+	font-family: 'UniversNextforHSBC-Bold';
+	color: #DB0011;
+}
+
+
+/*TAB 2 - HAPPY WEEKEND*/
+ul.chs_tab2_subtab{
+	width: 100%;
+	height: auto;
+	/* float: left; */
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	/* background-color: #f2f2f2; */
+	border-bottom: 3px solid #db0011;
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+}
+ul.chs_tab2_subtab li{
+	/* width: 20%; */
+	flex-grow: 1;
+	flex-basis: 0;
+	height: 70px;
+	float: left;
+	text-align: center;
+	/* padding-top: 10px; */
+	background-color: #f2f2f2;
+	border-left: 1px solid #ccc !important;
+	border-top: 1px solid #ccc !important;
+	border-radius: 10px 10px 0 0;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-right: 5px;
+
+}
+ul.chs_tab2_subtab li a{
+  color: #000000;
+  width: 100%;
+  display: block;
+  line-height: 0.8em;
+}
+
+ul.chs_tab2_subtab li a sup {
+	color: #000000;
+}
+ul.chs_tab2_subtab li.active{
+	background-color: #db0011;
+	border-left: 1px solid #db0011 !important;
+	border-top: 1px solid #db0011 !important;
+	color: #FFFFFF;
+}
+ul.chs_tab2_subtab li.active a, ul.chs_tab2_subtab li.active a sup{
+  color: #FFFFFF;
+}
+ul.chs_tab2_subtab li:last-child{
+	border-right: 1px solid #CCC;
+}
+ul.chs_tab2_subtab li:nth-child(2).active img{
+	content: url(../images/hsbc/chs_icon_subtab_liveplus_active.png);
+}
+ul.chs_tab2_subtab li:nth-child(1).active img{
+	content: url(../images/hsbc/chs_icon_subtab_iphone_active.png);
+}
+ul.chs_tab2_subtab li:nth-child(3).active img{
+	content: url(../images/hsbc/chs_icon_subtab_all_active.png);
+}
+ul.chs_tab2_subtab li:nth-child(4).active img{
+	content: url(../images/hsbc/chs_icon_subtab_dining_active.png);
+}
+ul.chs_tab2_subtab li:nth-child(5).active img{
+	content: url(../images/hsbc/chs_icon_subtab_shopping_active.png);
+}
+ul.chs_tab2_subtab li:nth-child(6).active img{
+	content: url(../images/hsbc/chs_icon_subtab_travel_active.png);
+}
+ul.chs_tab2_subtab li:nth-child(7).active img{
+	content: url(../images/hsbc/chs_icon_subtab_other_active.png);
+}
+ul.chs_tab2_subtab li img{
+	width: 35px;
+	height: auto;
+	margin-right: 5px;
+}
+div#chs_tab2_subtab{
+	width: 100%;
+	max-width: 1200px;
+	z-index: 100;
+	background-color: #FFFFFF;
+}
+div#chs_tab2_subtab.sticky {
+	position: fixed !important;
+	top: 0px;
+	/* transition: top 1s; */
+}
+div#chs_tab2_subtab.sticky_show {
+	position: fixed !important;
+	/* top: 93px; */
+	/* transition: top 0.5s; */
+}
+div#chs_tab2_subtab.sticky  + div.chs_tab2_subtab_dash{
+	padding-top: 60px;
+}
+
+/* Countries Area */
+.countries_area {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.countries_area .countries_column {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.countries_area .countries_column:nth-child(1),
+.countries_area .countries_column:nth-child(2),
+.countries_area .countries_column:nth-child(4),
+.countries_area .countries_column:nth-child(5) {
+	flex-grow: 1;
+}
+
+.countries_area .countries_column:nth-child(3) {
+	flex-grow: 2;
+}
+
+.countries_area .countries_column:not(:last-child) {
+	margin-right: 10px;
+}
+
+.countries_area .countries_column .country_item {
+	position: relative;
+	width: 100%;
+	border-radius: 10px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 0;
+}
+
+.countries_area .countries_column .country_item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.countries_area .countries_column:nth-child(1) .country_item {
+	background-image: url(../images/hsbc/liveplus_indo.png);
+	padding-top: 100%;
+}
+
+.countries_area .countries_column:nth-child(2) .country_item:nth-child(1) {
+	background-image: url(../images/hsbc/liveplus_sri_lanka.png);
+	padding-top: 65.53%;
+}
+
+.countries_area .countries_column:nth-child(2) .country_item:nth-child(2) {
+	background-image: url(../images/hsbc/liveplus_malay.png);
+	padding-top: 100%;
+}
+
+.countries_area .countries_column:nth-child(3) .country_item {
+	background-image: url(../images/hsbc/liveplus_vietnam.png);
+	padding-top: 113.2%;
+}
+
+.countries_area .countries_column:nth-child(4) .country_item:nth-child(1) {
+	background-image: url(../images/hsbc/liveplus_taiwan.png);
+	padding-top: 100%;
+}
+
+.countries_area .countries_column:nth-child(4) .country_item:nth-child(2) {
+	background-image: url(../images/hsbc/liveplus_singapore.png);
+	padding-top: 64.61%;
+}
+
+.countries_area .countries_column:nth-child(5) .country_item:nth-child(1) {
+	background-image: url(../images/hsbc/liveplus_india.png);
+	padding-top: 112.47%;
+}
+
+.countries_area .countries_column:nth-child(5) .country_item:nth-child(2) {
+	background-image: url(../images/hsbc/liveplus_philipines.png);
+	padding-top: 100%;
+}
+
+.countries_area .countries_column .country_item .country_name {
+	position: absolute;
+	height: 25px;
+	left: 10%;
+	right: 10%;
+	bottom: 10px;
+	border-radius: 12.5px;
+	line-height: 25px;
+	font-size: 15px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 5px 2.5px 0px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 5px 2.5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 5px 2.5px 0px rgba(0,0,0,0.5);
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+}
+/* Countries Area End */
+
+/* Red Bar */
+.title_bar {
+	width: 100%;
+	background-color: #db0011;
+	border-radius: 10px;
+	padding: 10px 2.5%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.title_bar .text {
+	font-size: 24px;
+	line-height: 1em;
+	color: #FFFFFF;
+}
+
+.title_bar i {
+	color: #FFFFFF;
+	transition: all 0.5s forwards;
+}
+
+.title_bar.active i {
+	transform: rotate(180deg);
+}
+/* Red Bar End */
+
+/* START POPUP */
+.chs_popup_item_unlist table {
+  margin-top: 20px;
+}
+
+.chs_popup_item_unlist td {
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.chs_popup_item_unlist td strong {
+  color: #db0011;
+}
+
+ul.chs_popup_box{
+	height: auto;
+	margin: 30px 20px;
+	padding: 0;
+	list-style-type: none;
+}
+ul.chs_popup_box li{
+	margin: 0;
+	padding: 0;
+}
+ul.chs_popup_box li.chs_popup_title strong{
+	font-size: 25px;
+	text-transform: uppercase;
+}
+ul.chs_popup_box li.chs_popup_item{
+	font-size: 18px;
+	position: relative;
+	padding: 20px 0 0 30px;
+}
+ul.chs_popup_box li.chs_popup_item::before{
+	font-family: 'Glyphicons Halflings';
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+ul.chs_popup_box li.chs_popup_item.gift::before{
+	content:"\e102";
+}
+ul.chs_popup_box li.chs_popup_item.info::before{
+	content:"\e086";
+}
+ul.chs_popup_box li.chs_popup_item.location::before{
+	content:"\e062";
+}
+ul.chs_popup_item_unlist{
+	margin: 0 0 0 10px;
+	padding: 5px 0 0 0;
+	list-style-type: none;
+}
+ul.chs_popup_item_list{
+	margin: 0 0 0 30px;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.chs_popup_item_unlist li{
+	content: "";
+	padding: 10px 0 0 20px;
+}
+
+ul.chs_popup_item_list li.no-bullet{
+	padding: 10px 0 0 0;
+	position: relative;
+  font-weight: bold;
+}
+
+ul.chs_popup_item_list li.no-bullet::before{
+	content: "";
+	width: 0px !important;
+	height: 0px !important;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+}
+ul.chs_popup_item_list li{
+	padding: 10px 0 0 20px;
+	position: relative;
+}
+ul.chs_popup_item_list > li::before{
+	content: "";
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background-color: #000000;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+}
+
+ul.chs_popup_item_list li > ul.chs_popup_item_unlist {
+	margin-left: 0;
+	padding-top: 0;
+}
+
+ul.chs_popup_item_list li > ul.chs_popup_item_unlist > li {
+	padding-left: 0;
+}
+
+ul.chs_popup_item_unlist li ul.chs_popup_item_list{
+	margin: 0 0 0 0px;
+}
+ul.chs_popup_item_unlist li ul.chs_popup_item_list li/* :first-child */{
+	padding: 0 0 0 20px;
+}
+ul.chs_popup_item_unlist li ul.chs_popup_item_list li{
+	padding: 10px 0 0 20px;
+}
+/* ul.chs_popup_item_unlist li ul.chs_popup_item_list li:first-child::before{
+	top: 10px;
+} */
+ul.chs_popup_item_unlist li ul.chs_popup_item_list li::before{
+	top: 20px;
+	left: 0px;
+}
+
+ul.chs_popup_item_list table {
+	border: 0.5px solid #000000;
+}
+
+ul.chs_popup_item_list table td {
+	border: 0.5px solid #000000;
+	padding: 10px;
+}
+
+ul.chs_popup_item_list table td:first-child {
+	width: 30%;
+}
+
+ul.chs_popup_item_list table tr:not(:first-child) td:not(:first-child) {
+	text-align: center;
+}
+
+a.chs_tab2_tnc{
+  /* font-size: 20px; */
+  color: blue;
+  text-decoration: underline;
+  font-style: italic;
+}
+/* END POPUP */
+
+
+/* UPDATE KEY VISUAL - 2019.03.20 */
+/* .carousel-inner>.item, */
+.chs_bg_item{
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  width: 100%;
+  height: auto;
+  display: inline-table;
+  padding: 50px 0 30px 0;
+}
+.carousel-inner .item{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel-inner .item:nth-child(1){
+  background-image: url('../images/image/chs_bg_daily_offers.png') !important;
+}
+.carousel-inner .item:nth-child(2){
+  background-image: url('../images/image/chs_bg_happy_weekend.png') !important;
+}
+.carousel-inner .item:nth-child(3){
+  background-image: url('../images/image/chs_bg_travel_page.png') !important;
+}
+.carousel-inner .item:nth-child(4){
+  background-image: url('../images/image/chs_bg_installment.png') !important;
+}
+
+/* 05.07.2019 - BANNER HSBC */
+.chs_banner_mobile{
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.chs_banner_mobile img{
+  width: 100%;
+  height: auto;
+}
+.chs_banner_pc{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  background-image: url('../images/image/chs_homepage_banner.jpg') !important;
+  background-position: top right;
+  background-size: cover;
+}
+.chs_banner_iphone {
+	background-image: url('../images/image/chs_homepage_banner_iphone.jpg') !important;
+}
+.chs_banner_liveplus {
+	background-image: url('../images/image/chs_homepage_banner_liveplus.jpg') !important;
+}
+.chs_banner_bg{
+  width: 100%;
+  height: auto;
+  background-color: #FFFFFF;
+  padding: 30px;
+  margin: 0 0 0 15px;
+}
+.chs_banner_title{
+  font-size: 38px;
+  line-height: 1.2;
+  color: #333333;
+  position: relative;
+  width: fit-content;
+}
+
+.chs_banner_title .upper_text_container {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	padding-left: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	/* align-items: center; */
+}
+
+.chs_banner_title .upper_text_container .upper_text_plus {
+	font-size: 32px;
+	font-family: 'UniversNextforHSBC-Bold';
+	font-weight: 700;
+	line-height: 20px;
+}
+
+.chs_banner_title .upper_text_container .upper_text {
+	width: max-content;
+	font-size: 12px;
+	font-family: 'UniversNextforHSBC-Bold';
+	font-weight: 700;
+	padding-left: 5px;
+}
+
+.chs_banner_text{
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* FOOTER CSS */
+#chs_footer .col-sm-6{
+  padding: 0px !important;
+}
+ul.chs_footer_item{
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  display: inline;
+}
+ul.chs_footer_item li{
+  vertical-align: top;
+  float: left;
+  padding: 0 15px 0 0;
+}
+ul.chs_footer_item li a:hover{
+  text-decoration: underline;
+}
+ul.chs_footer_item li a{
+  font-size: 14px;
+  color: #FFFFFF;
+}
+#chs_footer .col-sm-6.col-xs-12 p{
+  font-size: 14px;
+  color: #FFFFFF;
+  margin: 0px !important;
+}
+#chs_footer .col-sm-6{
+  text-align: right;
+}
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+	.chs_main_offer_bg{
+		/* height: 330px; */
+	}
+	#chs_tab_1 p.chs_main_offer_period{
+		position: absolute;
+		bottom: 10px;
+		left: 20px;
+	}
+	p.chs_main_offer_period{
+		position: absolute;
+		bottom: 40px;
+		left: 20px;
+	}
+	div.chs_main_offer_category{
+		position: absolute;
+		bottom: 15px;
+		left: 20px;
+	}
+}
+
+@media (max-width: 980px) {
+	img.chs_slider_img{
+		width: 90%;
+		height: auto;
+		margin: 0 auto;
+		float: none;
+    display: block;
+	}
+	.chs_slider_content {
+		margin: 0 !important;
+		text-align: center;
+	}
+	.chs_slider_content_btn {
+		margin: 50px auto;
+	}
+
+  ul.chs_tab2_subtab li img{
+  	width: 30px;
+  	height: auto;
+  	margin-right: 5px;
+  }
+
+  ul.chs_tab2_subtab li a{
+  	font-size: 14px;
+  }
+
+  .chs_main_offer_box {
+	flex-basis: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+	p.chs_main_offer_period{
+		position: absolute;
+		bottom: 10px;
+		left: 20px;
+	}
+	div.chs_main_offer_category{
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+		left: auto;
+	}
+	#chs_tab2_subtab{
+		padding: 0px;
+	}
+	ul.chs_tab2_subtab li{
+		width: 20%;
+		height: 75px;
+		font-size: 14px;
+		padding-top: 5px !important;
+	}
+	ul.chs_tab2_subtab li img{
+		margin: 0 auto !important;
+		display: block;
+		width: 40px !important;
+		height: auto;
+	}
+	/* div#chs_tab2_subtab.sticky_show {
+		top: 205px;
+	} */
+	/* #chs_key_slider,
+	#chs_key_slider_1,
+	ul.chs_key_tab2 {
+		margin: 80px 0 30px 0 !important;
+	} */
+
+	ul.chs_key_tab2 li div,
+	ul.key_slides_wrapper li div{
+		text-align: center;
+	}
+
+	.chs_slider_content_btn {
+		margin: 30px auto 50px auto !important;
+	}
+	ul.chs_popup_box {
+		margin: 30px 0px;
+	}
+	img.chs_slider_img{
+		width: 100%;
+		height: auto;
+		margin: 50px 0 20px 0;
+		float: none;
+	}
+  .chs_slider_content {
+    /* margin: 30px 15px 0 0; */
+    padding: 0px 15px 0 0 !important;
+  }
+  .chs_main_offer_bg{
+    /* height: 400px; */
+  }
+}
+
+@media (max-width: 480px) {
+  .chs_main_offer{
+  	width: 100%;
+  	height: auto;
+  	/* padding: 50px 0; */
+    padding: 0;
+  	float: left;
+  }
+  .chs_flex_container {
+	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	-ms-grid-columns: minmax(100%, 1fr);
+  }
+	
+  /* .chs_main_offer_box {
+	max-width: 100%;
+	min-width: 100%;
+  } */
+	.chs_slider_content_btn {
+		margin: 20px auto 50px auto !important;
+	}
+  #chs_key_slider_1,
+  #chs_key_slider {
+  	margin: 50px 0 30px 0 !important;
+  }
+	#chs_key_slider_1 .chs_slider_control.left,
+	#chs_key_slider .chs_slider_control.left{
+		left: 30% !important;
+	}
+	#chs_key_slider_1 .chs_slider_control.right,
+	#chs_key_slider .chs_slider_control.right{
+		right: 30% !important;
+	}
+	ul.chs_tab2_subtab li img{
+		margin: 0 auto 5px !important;
+		display: block;
+		width: 50% !important;
+		height: auto;
+	}
+	ul.chs_tab2_subtab li{
+		height: 90px;
+		font-size: 14px;
+		padding-top: 0 !important;
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+	}
+	
+	ul.chs_tab2_subtab li a {
+		line-height: 1.0em;
+	}
+
+	/* div#chs_tab2_subtab.sticky_show {
+		top: 193px;
+	} */
+	div#chs_tab2_subtab.sticky  + div.chs_tab2_subtab_dash{
+		padding-top: 90px;
+	}
+  img.chs_slider_img {
+    width: 100%;
+    height: auto;
+    margin: 50px 0 20px 0;
+    padding: 0px !important;
+    float: none;
+}
+
+ul.chs_tab2_subtab {
+	/* flex-wrap: wrap; */
+}
+
+ul.chs_tab2_subtab > li {
+	/* flex-basis: calc(100% / 3);
+	padding-top: 10px;
+	padding-bottom: 10px; */
+}
+
+ul.chs_tab2_subtab li a {
+	font-size: 12px;
+}
+
+.modal-dialog {
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+	width: calc(100vw - 20px) !important;
+}
+
+.countries_area {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+
+.countries_area .countries_column:not(:last-child) {
+	margin-right: 0;
+}
+
+.countries_area .countries_column .country_item {
+	padding-top: 100% !important;
+	background-size: cover !important;
+	z-index: 1;
+}
+
+.countries_area .countries_column:nth-child(1) {
+	grid-area: 4 / 3 / 5 / 4;
+	z-index: 1;
+}
+
+.countries_area .countries_column:nth-child(2) {
+	grid-area: 4 / 1 / 5 / 3;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	z-index: 1;
+}
+
+.countries_area .countries_column:nth-child(2) .country_item:nth-child(1) {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.countries_area .countries_column:nth-child(2) .country_item:nth-child(2) {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.countries_area .countries_column:nth-child(3) {
+	grid-area: 1 / 1 / 3 / 3;
+	z-index: 1;
+}
+
+.countries_area .countries_column:nth-child(4) {
+	grid-area: 2 / 1 / 4 / 4;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	z-index: 0;
+}
+
+.countries_area .countries_column:nth-child(4) .country_item:nth-child(1) {
+	grid-area: 1 / 3 / 2 / 4;
+}
+
+.countries_area .countries_column:nth-child(4) .country_item:nth-child(2) {
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+.countries_area .countries_column:nth-child(5) {
+	grid-area: 3 / 2 / 4 / 4;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	z-index: 1;
+}
+
+.countries_area .countries_column:nth-child(5) .country_item:nth-child(1) {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.countries_area .countries_column:nth-child(5) .country_item:nth-child(2) {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+.countries_area .countries_column .country_item:not(:last-child) {
+	margin-bottom: 0;
+}
+
+.countries_area .countries_column .country_item .country_name {
+	font-size: 12px;
+	height: 18px;
+	line-height: 18px;
+}
+
+/* 05.07.2019 - BANNER HSBC */
+.chs_key .chs_page_w{
+  padding: 0px !important;
+}
+#chs_key_slider {
+    margin: 100px 0 0 0 !important;
+}
+.chs_banner_title{
+  font-size: 32px;
+}
+.chs_banner_mobile {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.chs_banner_pc {
+    width: 100%;
+    height: auto;
+    background-image: none !important
+}
+.chs_banner_bg {
+    padding: 10px 0 20px 0px !important;
+    margin: 0px !important;
+}
+
+/* FOOTER CSS */
+ul.chs_footer_item li{
+  display: block;
+  width: 100% !important;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+#chs_footer .col-sm-6{
+  text-align: center;
+}
+
+	.chs_main_offer_box {
+		flex-basis: 100%;
+	}
+
+	.chs_main_offer_bg {
+		padding-bottom: 80px;
+	}
+}
+
+@media (max-width: 375px) {
+	/* div#chs_tab2_subtab.sticky_show {
+		top: 189px;
+	} */
+  /* #chs_key_slider_1,
+  #chs_key_slider {
+  	margin: 60px 0 30px 0 !important;
+  } */
+	div#chs_tab2_subtab.sticky  + div.chs_tab2_subtab_dash{
+		padding-top: 90px;
+	}
+	ul.chs_tab2_subtab li{
+		height: 88px;
+	}
+}
+
+@media (max-width: 320px) {
+	/* div#chs_tab2_subtab.sticky_show {
+		top: 184px;
+	} */
+	div#chs_tab2_subtab.sticky  + div.chs_tab2_subtab_dash{
+		padding-top: 90px;
+	}
+	.chs_main_offer_bg{
+		/* height: 350px !important; */
+	}
+	ul.chs_tab2_subtab li{
+		height: 80px;
+	}
+	p.chs_main_offer_period{
+		position: absolute;
+		bottom: 40px !important;
+		left: 15px;
+	}
+	div.chs_main_offer_category{
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+	}
+  #chs_key_slider_1,
+  #chs_key_slider {
+  	margin: 120px 0 20px 0 !important;
+  }
+}
+/*KEY SLIDER*/
+
+ul.chs_key_tab2{
+	width: 100%;
+	height: auto;
+	margin: 80px 0 30px 0;
+	padding: 0;
+	list-style-type: none;
+	display: table;
+}
+#chs_key_slider_1,
+#chs_key_slider {
+	margin: 20px 0;
+}
+.chs_slider_content {
+	/* margin: 30px 15px 0 0; */
+  padding: 30px 15px 0 0;
+}
+.chs_slider_content_btn {
+	width: 150px;
+	height: 40px;
+	background-color: #db0011;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 40px;
+	padding-top: 8px;
+	margin-top: 50px;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+.chs_slider_content_btn a {
+	color: #FFFFFF !important;
+	text-decoration: none;
+}
+.chs_slider_content_title strong {
+	font-size: 20px;
+	color: #FFFFFF;
+}
+p.chs_slider_content_text{
+  color: #FFFFFF;
+}
+#chs_key_slider_1 .chs_slider_control.left,
+#chs_key_slider .chs_slider_control.left{
+	position: absolute;
+	bottom: 8px;
+	left: 40%;
+	z-index: 10;
+}
+#chs_key_slider_1 .chs_slider_control.right,
+#chs_key_slider .chs_slider_control.right{
+	position: absolute;
+	bottom: 8px;
+	right: 40%;
+	z-index: 10;
+}
+#chs_key_slider_1 .chs_slider_control i,
+#chs_key_slider .chs_slider_control i{
+	color: #db0011;
+	font-size: 20px;
+}
+#chs_key_slider_1 ol,
+#chs_key_slider ol{
+	position: absolute;
+	bottom: 0px;
+	z-index: 10;
+}
+.carousel-indicators .active {
+    background-color: #db0011 !important;
+}
+.carousel-indicators li {
+	border: 1px solid #fff;
+	background-color: #FFFFFF !important;
+}
+
+.display-none {
+	display: none !important;
+}

@@ -1,0 +1,10 @@
+doctype html
+html(lang='en')
+  head
+    title Error
+  body
+    h1 Error Message
+    #container.col
+      h1 #{error.status} #{message}
+      pre #{error.stack}
+
