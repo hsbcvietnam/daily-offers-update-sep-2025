@@ -6,7 +6,7 @@ const router = express.Router();
 const folderName = 'projects/daily-offers';
 
 let curDate = new Date();
-let hideDate = new Date('31 Dec 2024 23:59:59')
+let hideDate = new Date('31 Jan 2026 23:59:59')
 // Test Date
 // let showDate = new Date('1 Jan 2024 23:59:59') // Hide this when air
 // Air Date
@@ -79,7 +79,7 @@ router.get('/daily-offers/others/en', function(req, res, next) {
 });
 
 if (curDate.getTime() < hideDate.getTime()) {
-  router.get('/daily-offers/iphone16', function(req, res, next) {
+  router.get('/daily-offers/iphone17', function(req, res, next) {
     res.render(`${folderName}/daily-offers/iphone`, {
       folderName,
       csrfToken: req.csrfToken(),
@@ -154,7 +154,7 @@ router.get('/uu-dai-moi-ngay/khac/vn', function(req, res, next) {
   });
 });
 if (curDate.getTime() < hideDate.getTime()) {
-  router.get('/uu-dai-moi-ngay/iphone16', function(req, res, next) {
+  router.get('/uu-dai-moi-ngay/iphone17', function(req, res, next) {
     res.render(`${folderName}/uu-dai-moi-ngay/iphone`, {
       folderName,
       csrfToken: req.csrfToken(),

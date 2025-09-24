@@ -20,7 +20,7 @@ $(document).ready(function() {
   //   show_tab("2");
   // }
   let curDate = new Date();
-  let hideDate = new Date('31 Dec 2024 23:59:59')
+  let hideDate = new Date('31 Jan 2026 23:59:59')
   // Test Date (active this option to see what page would look like from 1/7 onwards)
   // let showDate = new Date('1 Jan 2024 23:59:59') // Hide this when air
   // Air Date (active this option to see what page would look like from 18/6 to 31/6)
@@ -30,7 +30,7 @@ $(document).ready(function() {
     if(num_tab_id.indexOf("/uu-dai-moi-ngay/an-uong-giai-tri/vn") !== -1 || num_tab_id.indexOf("/daily-offers/dining-entertainment/en") !== -1){
       show_tab('4');
       subtab_filter('dining', '4');
-    }else if(num_tab_id.indexOf("/uu-dai-moi-ngay/iphone16") !== -1 || num_tab_id.indexOf("/daily-offers/iphone16") !== -1 ){
+    }else if(num_tab_id.indexOf("/uu-dai-moi-ngay/iphone17") !== -1 || num_tab_id.indexOf("/daily-offers/iphone17") !== -1 ){
       show_tab('2');
       subtab_filter('iphone', '1');
     }else if(num_tab_id.indexOf("/uu-dai-moi-ngay/mua-sam/vn") !== -1 || num_tab_id.indexOf("/daily-offers/shopping/en") !== -1 ){
